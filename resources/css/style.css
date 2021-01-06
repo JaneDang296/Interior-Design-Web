@@ -1,16 +1,6 @@
-/* ------------------------------------------------------------------------------------*/
-/*                              Basic Setup                                            */
-/* ------------------------------------------------------------------------------------*/
-
 @font-face {
-/*  font-family: GT Walsheim;*/
+  font-family: GT Walsheim;
   src: url(/resources/css/font/GTWalsheimPro-Regular.woff);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -22,137 +12,60 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+body {
+  font-family: GT Walsheim;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 header {
     background-size: 100% 100%;
     background-position: center;
     height: 100vh;
 }
 
-.slideShow {
-    height: 100vh;
-    position: relative;
-}
 
-.mySlide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
 
-h1 {
-    margin:0 ;
-    font-size: 90px;
-    letter-spacing: 0px;
-    word-spacing: 2px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    color: rgb(47, 47, 47);
-}
+/* ------------------------------------------------------------------------------------*/
+/*                         Header for LANDING PAGE                                     */
+/* ------------------------------------------------------------------------------------*/
 
-h2 {
+    /*     Navigation Bar      */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 30px;
+    background-color: #f4f4f4;
     text-align: center;
-    font-size: 45px;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    padding: 3px 2%;
 }
 
-h2:after {
-    display: block;
-    height: 4px;
-    background-color: orange;
-    content: "";
-    width: 600px;
-    margin: 0 auto;
-}
-
-h3 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-/* ------------------------------------------------------------------------------------*/
-/*                              Landing Page                                     */
-/* ------------------------------------------------------------------------------------*/
-
-.hero-text-box {
-    position: absolute;
-    color: rgb(36, 33, 34);
-    width: 1140px;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.btn:link,
-.btn:visited{
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 100px;
-    font-size: 28px;
+nav a {
     text-decoration: none;
-    border-radius: 50px;
-    color: #000000;
-    transition: background-color 0.2s, border 0.2s, color 0.2s;
-}
-
-.btn-full:link,
-.btn:visited {
-    background-color: #f7c371;
-    margin-right: 30px;
-}
-
-.btn-ghost:link,
-.btn.ghost:visited {
-    background-color: #f8af3a;
-}
-
-.btn:hover,
-.btn:active {
-    background-color: #fbd08c;
-}
-
-/* ------------------------------------------------------------------------------------*/
-/*                             Navigation Bar                                          */
-/* ------------------------------------------------------------------------------------*/
-
-.main-nav {
-    list-style: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.main-nav li {
-    display: inline-block;
-/*    margin-left: 300px;*/
-    width: 30%;
-    
-}
-
-.main-nav li a:link,
-.main-nav li a:visited  {
-    text-decoration: none;
-    font-size: 40px;
-    border-bottom: 0px solid transparent;
-    transition: border-bottom 0.05s;
     color: black;
-    padding: 2px;
+    padding-left: 10px;
 }
 
-.main-nav li a:hover,
-.main-nav li a:active {
-    border-bottom: 4px solid #f8af3a;
-} 
+nav ul {
+    padding-top: 20px;
+    text-decoration: none;
+}
 
-.Logo {
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
+nav a:link,
+{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-brand {
+    font-size: 50px;
+    color: black;
 }
 
 .dropdown {
@@ -160,7 +73,7 @@ h3 {
   display: inline-block;
 }
 
-.dropdown-content  {
+.dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -197,35 +110,82 @@ h3 {
   -webkit-transform: rotate(45deg);
 }
 
-/* ------------------------------------------------------------------------------------*/
-/*                             Features and Showcase                              */
-/* ------------------------------------------------------------------------------------*/
-
-.section {
-    padding: 10px 0;
+    /*     Picture Show      */
+.slideShow {
+    height: 100vh;
+    position: relative;
 }
 
-.section-features .long-copy{
-    margin-top: 30px;
-    margin-bottom: 20px;
+.mySlide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-.long-copy
-{
+    /*     Content in Picture Show      */
+.hero-text-box {
+    position: absolute;
+    color: rgb(163, 163, 163);
+    width: 1140px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    line-height: 10px;
 }
 
-/* ---------ICON--------- */
-ion-icon {
-    font-size: 64px;
-    color: #edae49;
+.hero-text-box h1 {
+    color: #000000;
+}
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 100px;
+    font-size: 28px;
+    text-decoration: none;
+    border-radius: 50px;
+    color: #000000;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn:visited {
+    background-color: #f7c371;
+    margin-right: 30px;
+}
+
+.btn-ghost:link,
+.btn.ghost:visited {
+    background-color: #f8af3a;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #fbd08c;
+}
+
+/* ------------------------------------------------------------------------------------*/
+/*                         Section for LANDING PAGE                                    */
+/* ------------------------------------------------------------------------------------*/
+
+ /*Jumbotron */
+.Box1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.jumbotron {
+    margin-top: 100px;
 }
 
 /* --------- Showcase --------- */
 .section-style {
-    padding: 60px;
-    margin-bottom: 800px;
 }
 .style-showcase {
     list-style: none;
@@ -274,25 +234,52 @@ ion-icon {
 
 
 /* ------------------------------------------------------------------------------------*/
-/*                              Sign Up Page                                   */
+/*                                  SIGN UP PAGE                                        */
 /* ------------------------------------------------------------------------------------*/
-
-.SignUpLink {
-    background:url(/resources/css/img/SignUpBackground.jpg);
+.SignUpPage{
+    background-image: url(/resources/css/img/SignUpBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-input {
-    border-radius: 5px;
-    background-color: transparent;
-    box-shadow: none;
+header h3 {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+.TextBox {
+/*
+    position: absolute;
+    right: 0px;
+    width: 250px;
+*/
+    margin: auto;
+    width: 50%;
 }
 
-#name_tag, #email_tag, #password_tag, #choice {
-    width: 80%;
-    height: 50px;
-    font-size: 20pt;
+.SignUp { /*Sign up for Homely */
+    width: 50%;
+    height: auto;
+    float: left;
+    background: rgba(248, 248, 248, 0.88);
+    text-align: center;
+    padding: 50px;
+}
+
+.SignUp p,
+.SignUp a {
+    color: #acacac;
+}
+.form-select {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mb-3 {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
 }
 
 #submit_tag {
@@ -301,31 +288,37 @@ input {
     width: 80%;
 }
 
-.custom-select {
-    width: 100%;
-    text-align: center;
-}
-
-.SignUp { /*Sign up for Homely */
-    width: 40%;
-    height: 500px;
-    float: left;
+.TextBox {
+    width: 80%;
     background: rgba(248, 248, 248, 0.88);
+    display: flex;
+    box-shadow: 3px 3px #ebebeb;
+    
+    /* Place the div center both horizontal and vertical */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.Next-Step{ /*What's Next */
+    width: 50%;
+    float: left;
+    background: rgba(242, 235, 235, 0.58);
+    padding: 50px;
+    overflow: hidden;
+}
+
+.TextBox .Next-Step h5 {
     text-align: center;
 }
 
-#Next-Step{ /*What's Next */
-    width: 40%;
-    float: left;
-    background: rgba(242, 242, 242, 0.88);
-}
-
-#Next-Step li:before {
-    content: '✓';
-    background: #fdfd6a;
-    border-radius: 10px;
-  
-}
-#Next-Step li:  {
-    list-style-type: none;
+.StepImage {
+    display: block;
+    margin: 0 auto auto auto; /*top-right-bottom-left*/
+    width: 60%;
+    border-radius: 50%;
+    object-fit: cover;
 }
